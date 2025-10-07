@@ -380,7 +380,7 @@ span{
 
 /* breakpoints */
 
-@media(max-width:1200px){
+ /* @media(max-width:1200px){
     html{
         font-size: 55%;
     }
@@ -451,7 +451,7 @@ span{
      /* nav ul #menu { 
         display: none;
      }  */
-      .about {
+      /* .about {
         padding: 60px 0;
         min-height: auto;
     }
@@ -527,7 +527,7 @@ span{
      /* .marginclass{
         margin-bottom :  -51px;
      } */
-     .contact {
+     /* .contact {
         padding: 60px 5% 40px;
         min-height: auto;
     }
@@ -570,7 +570,7 @@ span{
     }
 
     /* Footer */
-    .footer {
+    /* .footer {
         padding: 2rem 5%;
         flex-direction: column;
         text-align: center;
@@ -672,4 +672,271 @@ span{
         font-size: 2.5rem;
     }
 
+}   */
+   /* Media query for max-width: 1200px */
+@media (max-width: 1200px) {
+    html {
+        font-size: 55%;
+    }
+}
+
+/* Media query for max-width: 991px */
+@media (max-width: 991px) {
+    .main-nav {
+        padding: 2rem 3%;
+    }
+    header {
+        padding: 2rem 3%;
+    }
+    .portfolio {
+        padding-bottom: 7rem;
+    }
+    .about,
+    .services,
+    .portfolio,
+    .contact {
+        padding: 8rem 3% 2rem;
+    }
+    .contact {
+        min-height: auto;
+    }
+    .footer {
+        padding: 2rem 3%;
+    }
+}
+
+/* Media query for max-width: 768px */
+@media (max-width: 768px) {
+    #menu {
+        display: block !important;
+        cursor: pointer;
+        position: absolute;
+        right: 10%;
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: 2.5rem;
+        color: #a78bfa;
+        z-index: 200;
+    }
+    .main-nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 100;
+        background: #1a1a2e;
+        padding: 1.5rem 3%;
+    }
+    .main-nav ul {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        padding: 0;
+        background: #1a1a2e;
+        border-top: 0.1rem solid #080808;
+        box-shadow: 0 0.5rem 1rem #080808;
+        flex-direction: column;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease-out;
+        display: none;
+    }
+    .main-nav ul.active {
+        display: block;
+        max-height: 300px;
+        padding-bottom: 1rem;
+    }
+    .main-nav ul li {
+        display: block;
+        margin: 0;
+        padding: 0.5rem 10%;
+        text-align: left;
+        width: 100%;
+    }
+    .main-nav ul li a {
+        display: block;
+    }
+    .about,
+    .portfolio,
+    .contact {
+        padding-top: 7rem;
+        padding-bottom: 4rem;
+        min-height: auto;
+    }
+    .about-row {
+        flex-direction: column;
+        text-align: center;
+    }
+    .about-col-1 {
+        flex-basis: 100%;
+        margin-top: 2rem;
+        width: 100%;
+    }
+    .about-col-1 img {
+        width: 100%;
+        max-width: 350px;
+        height: auto;
+        margin: 0 auto;
+        display: block;
+    }
+    .about-col-1 h1 {
+        font-size: 3rem;
+        margin-top: 2rem;
+    }
+    .about-col-1 h3 {
+        font-size: 1.8rem;
+        margin: 1rem 0;
+    }
+    .about-col-1 p {
+        font-size: 1.4rem;
+        line-height: 1.6;
+        text-align: left;
+    }
+    .sub-title {
+        font-size: 3.5rem;
+        text-align: center;
+    }
+    .portfolio h2 {
+        margin-top: 2rem;
+        margin-bottom: 1rem;
+        font-size: 3.5rem;
+    }
+    .portfolio-container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+        margin-top: 0;
+    }
+    .portfolio-box img {
+        height: 180px;
+    }
+    .portfolio-layer h3 {
+        font-size: 1.6rem;
+    }
+    .portfolio-layer p {
+        font-size: 1.2rem;
+    }
+    .contact h2 {
+        font-size: 3.5rem;
+        margin-top: 2rem;
+        margin-bottom: 3rem;
+    }
+    .contact form {
+        max-width: 100%;
+        padding: 0 5%;
+    }
+    .contact form .input-box {
+        flex-direction: column;
+    }
+    .contact form .input-box input {
+        width: 100%;
+        margin: 0.5rem 0;
+        padding: 1.2rem;
+        font-size: 1.4rem;
+    }
+    .contact form textarea {
+        width: 100%;
+        min-height: 180px;
+        padding: 1.2rem;
+        font-size: 1.4rem;
+        margin: 0.5rem 0;
+    }
+    .contact form .btn {
+        width: 100%;
+        padding: 1.2rem;
+        font-size: 1.6rem;
+        margin-top: 1.5rem;
+    }
+    .footer {
+        padding: 2rem 5%;
+        flex-direction: column;
+        text-align: center;
+        gap: 1rem;
+    }
+    .footer-text {
+        font-size: 1.2rem;
+    }
+    .footer-icon {
+        margin-top: 1rem;
+    }
+}
+
+/* Media query for max-width: 617px */
+@media (max-width: 617px) {
+    .portfolio-container {
+        grid-template-columns: 1fr;
+    }
+    .header-text h1 {
+        font-size: 2.8rem;
+    }
+    .about-col-1 h1,
+    .sub-title {
+        font-size: 2.8rem;
+    }
+}
+
+/* Media query for max-width: 450px */
+@media (max-width: 450px) {
+    html {
+        font-size: 50%;
+    }
+    .main-nav {
+        padding: 1.5rem 5%;
+    }
+    header {
+        padding-top: 6rem;
+    }
+    .header .container {
+        padding-top: 0;
+    }
+    .about,
+    .services,
+    .portfolio,
+    .contact {
+        padding-top: 6rem;
+        margin-top: 0;
+    }
+    .header-text h1 {
+        font-size: 2.5rem;
+    }
+    .header-text p {
+        font-size: 1.5rem;
+    }
+    .contact h2 {
+        font-size: 2.8rem;
+    }
+    .contact form .input-box input,
+    .contact form textarea {
+        width: 100%;
+        font-size: 1.3rem;
+    }
+    .social-media a {
+        width: 3.5rem;
+        height: 3.5rem;
+        font-size: 1.6rem;
+        margin: 2rem 1rem 2rem 0;
+    }
+    .about-col-1 img {
+        max-width: 280px;
+    }
+}
+
+/* Media query for max-width: 365px */
+@media (max-width: 365px) {
+    .footer {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+    .header-text h1 {
+        font-size: 2.2rem;
+    }
+    .main-nav {
+        padding: 1.5rem 5%;
+    }
+    .logo {
+        width: 150px;
+    }
+    .contact h2 {
+        font-size: 2.5rem;
+    }
 }
